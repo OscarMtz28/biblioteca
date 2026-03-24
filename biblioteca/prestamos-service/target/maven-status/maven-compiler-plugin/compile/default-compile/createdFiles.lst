@@ -1,0 +1,4 @@
+mx\uam\biblioteca\prestamos\PrestamosApplication.class
+mx\uam\biblioteca\prestamos\repository\PrestamoRepository.class
+mx\uam\biblioteca\prestamos\controller\PrestamoController.class
+mx\uam\biblioteca\prestamos\model\Prestamo.class

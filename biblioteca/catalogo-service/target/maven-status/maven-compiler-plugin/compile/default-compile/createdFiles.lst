@@ -1,0 +1,4 @@
+mx\uam\biblioteca\catalogo\CatalogoApplication.class
+mx\uam\biblioteca\catalogo\repository\LibroRepository.class
+mx\uam\biblioteca\catalogo\controller\LibroController.class
+mx\uam\biblioteca\catalogo\model\Libro.class
