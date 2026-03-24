@@ -18,39 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cargarUsuarios();
         cargarLibros();
     });
-
-    // ========================
-    // NAVEGACIÓN POR PESTAÑAS Y URL
-    // ========================
-    const handleHashChange = () => {
-        let hash = window.location.hash;
-        if (!hash) hash = '#resumen';
-        
-        const tabButton = document.querySelector(`button[data-bs-target="${hash}"]`);
-        if (tabButton) {
-            const tab = new bootstrap.Tab(tabButton);
-            tab.show();
-        }
-    };
-
-    // Escuchar el cambio manual en la barra de direcciones / botones back-forward
-    window.addEventListener('hashchange', handleHashChange);
-
-    // Actualizar la URL cuando el usuario hace clic en una pestaña
-    const tabs = document.querySelectorAll('button[data-bs-toggle="tab"]');
-    tabs.forEach(tab => {
-        tab.addEventListener('shown.bs.tab', (event) => {
-            const hash = event.target.getAttribute('data-bs-target');
-            if (history.replaceState) {
-                history.replaceState(null, null, hash);
-            } else {
-                window.location.hash = hash;
-            }
-        });
-    });
-
-    // Ejecutar al cargar la página por primera vez
-    handleHashChange();
 });
 
 // ========================
