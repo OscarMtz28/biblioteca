@@ -67,7 +67,7 @@ public class LibroController {
         return ResponseEntity.notFound().build();
     }
 
-    @PatchMapping("/{id}/prestar")
+    @PutMapping("/{id}/prestar")
     @Operation(summary = "Sustraer inventario para préstamo", description = "Restaura 1 del inventario disponible para registrar que el libro está siendo prestado.")
     public ResponseEntity<Libro> prestarLibro(@PathVariable Long id) {
         return libroRepository.findById(id)
@@ -81,7 +81,7 @@ public class LibroController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PatchMapping("/{id}/devolver")
+    @PutMapping("/{id}/devolver")
     @Operation(summary = "Restaurar inventario de devolución", description = "Aumenta 1 al inventario disponible para registrar que el libro regresó a la biblioteca.")
     public ResponseEntity<Libro> devolverLibro(@PathVariable Long id) {
         return libroRepository.findById(id)

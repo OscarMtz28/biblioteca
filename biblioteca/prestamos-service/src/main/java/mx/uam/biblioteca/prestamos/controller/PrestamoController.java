@@ -48,7 +48,7 @@ public class PrestamoController {
         // 2. Prestar Libro
         String prestarLibroUrl = catalogoUrl + "/" + peticion.getLibroId() + "/prestar";
         try {
-            restTemplate.patchForObject(prestarLibroUrl, null, String.class);
+            restTemplate.put(prestarLibroUrl, null);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Error al prestar libro (¿Sin stock?): " + e.getMessage());
         }
@@ -78,7 +78,7 @@ public class PrestamoController {
             // 1. Devolver Libro
             String devolverLibroUrl = catalogoUrl + "/" + prestamo.getLibroId() + "/devolver";
             try {
-                restTemplate.patchForObject(devolverLibroUrl, null, String.class);
+                restTemplate.put(devolverLibroUrl, null);
             } catch (Exception e) {
                 return ResponseEntity.internalServerError().body("Error al comunicar con catalogo-service");
             }
