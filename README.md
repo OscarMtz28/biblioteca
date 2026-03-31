@@ -108,7 +108,7 @@ run_all.bat
 
 ---
 
-### Opción 3: Levantar un servicio individualmente
+### Opción 3: Levantar un servicio individualmente (O en otro sistema operativo que no es windows)
 
 Para iniciar un servicio individualmente:
 

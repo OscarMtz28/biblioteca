@@ -1,6 +1,5 @@
 {
-    "cSpell.words": [
-        "biblioteca"
-    ],
-    "java.compile.nullAnalysis.mode": "automatic"
+  "cSpell.words": ["biblioteca"],
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.updateBuildConfiguration": "automatic"
 }
